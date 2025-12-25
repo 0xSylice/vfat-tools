@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   consoleInit(main)
 })
 
@@ -84,30 +84,30 @@ const SICKLE_FACTORY_ABI = [
 const GAUGE_V2_ABI = [
   {
     inputs: [
-      {internalType: 'address[]', name: '_rewardtokens', type: 'address[]'},
-      {internalType: 'address', name: '_token', type: 'address'},
-      {internalType: 'address', name: '_distribution', type: 'address'},
-      {internalType: 'address', name: '_feeVault', type: 'address'},
-      {internalType: 'address', name: '_votingIncentives', type: 'address'},
-      {internalType: 'address', name: '_claimer', type: 'address'},
-      {internalType: 'bool', name: '_isWeighted', type: 'bool'},
+      { internalType: 'address[]', name: '_rewardtokens', type: 'address[]' },
+      { internalType: 'address', name: '_token', type: 'address' },
+      { internalType: 'address', name: '_distribution', type: 'address' },
+      { internalType: 'address', name: '_feeVault', type: 'address' },
+      { internalType: 'address', name: '_votingIncentives', type: 'address' },
+      { internalType: 'address', name: '_claimer', type: 'address' },
+      { internalType: 'bool', name: '_isWeighted', type: 'bool' },
     ],
     stateMutability: 'nonpayable',
     type: 'constructor',
   },
-  {anonymous: false, inputs: [], name: 'ActivateEmergencyMode', type: 'event'},
+  { anonymous: false, inputs: [], name: 'ActivateEmergencyMode', type: 'event' },
   {
     anonymous: false,
-    inputs: [{indexed: true, internalType: 'address', name: 'token', type: 'address'}],
+    inputs: [{ indexed: true, internalType: 'address', name: 'token', type: 'address' }],
     name: 'AddRewardToken',
     type: 'event',
   },
   {
     anonymous: false,
     inputs: [
-      {indexed: true, internalType: 'address', name: 'from', type: 'address'},
-      {indexed: false, internalType: 'uint256', name: 'claimed0', type: 'uint256'},
-      {indexed: false, internalType: 'uint256', name: 'claimed1', type: 'uint256'},
+      { indexed: true, internalType: 'address', name: 'from', type: 'address' },
+      { indexed: false, internalType: 'uint256', name: 'claimed0', type: 'uint256' },
+      { indexed: false, internalType: 'uint256', name: 'claimed1', type: 'uint256' },
     ],
     name: 'ClaimFees',
     type: 'event',
@@ -115,9 +115,9 @@ const GAUGE_V2_ABI = [
   {
     anonymous: false,
     inputs: [
-      {indexed: true, internalType: 'address', name: 'from', type: 'address'},
-      {indexed: true, internalType: 'address', name: 'token', type: 'address'},
-      {indexed: false, internalType: 'uint256', name: 'claimed', type: 'uint256'},
+      { indexed: true, internalType: 'address', name: 'from', type: 'address' },
+      { indexed: true, internalType: 'address', name: 'token', type: 'address' },
+      { indexed: false, internalType: 'uint256', name: 'claimed', type: 'uint256' },
     ],
     name: 'ClaimFees',
     type: 'event',
@@ -125,8 +125,8 @@ const GAUGE_V2_ABI = [
   {
     anonymous: false,
     inputs: [
-      {indexed: true, internalType: 'address', name: 'user', type: 'address'},
-      {indexed: false, internalType: 'uint256', name: 'amount', type: 'uint256'},
+      { indexed: true, internalType: 'address', name: 'user', type: 'address' },
+      { indexed: false, internalType: 'uint256', name: 'amount', type: 'uint256' },
     ],
     name: 'Deposit',
     type: 'event',
@@ -134,9 +134,9 @@ const GAUGE_V2_ABI = [
   {
     anonymous: false,
     inputs: [
-      {indexed: true, internalType: 'address', name: 'user', type: 'address'},
-      {indexed: true, internalType: 'address', name: 'token', type: 'address'},
-      {indexed: false, internalType: 'uint256', name: 'reward', type: 'uint256'},
+      { indexed: true, internalType: 'address', name: 'user', type: 'address' },
+      { indexed: true, internalType: 'address', name: 'token', type: 'address' },
+      { indexed: false, internalType: 'uint256', name: 'reward', type: 'uint256' },
     ],
     name: 'Harvest',
     type: 'event',
@@ -144,69 +144,69 @@ const GAUGE_V2_ABI = [
   {
     anonymous: false,
     inputs: [
-      {indexed: true, internalType: 'address', name: 'previousOwner', type: 'address'},
-      {indexed: true, internalType: 'address', name: 'newOwner', type: 'address'},
+      { indexed: true, internalType: 'address', name: 'previousOwner', type: 'address' },
+      { indexed: true, internalType: 'address', name: 'newOwner', type: 'address' },
     ],
     name: 'OwnershipTransferred',
     type: 'event',
   },
   {
     anonymous: false,
-    inputs: [{indexed: false, internalType: 'address', name: 'account', type: 'address'}],
+    inputs: [{ indexed: false, internalType: 'address', name: 'account', type: 'address' }],
     name: 'Paused',
     type: 'event',
   },
   {
     anonymous: false,
-    inputs: [{indexed: true, internalType: 'address', name: 'token', type: 'address'}],
+    inputs: [{ indexed: true, internalType: 'address', name: 'token', type: 'address' }],
     name: 'RemoveRewardToken',
     type: 'event',
   },
   {
     anonymous: false,
     inputs: [
-      {indexed: true, internalType: 'address', name: 'token', type: 'address'},
-      {indexed: false, internalType: 'uint256', name: 'reward', type: 'uint256'},
+      { indexed: true, internalType: 'address', name: 'token', type: 'address' },
+      { indexed: false, internalType: 'uint256', name: 'reward', type: 'uint256' },
     ],
     name: 'RewardAdded',
     type: 'event',
   },
   {
     anonymous: false,
-    inputs: [{indexed: true, internalType: 'address', name: 'claimer', type: 'address'}],
+    inputs: [{ indexed: true, internalType: 'address', name: 'claimer', type: 'address' }],
     name: 'SetClaimer',
     type: 'event',
   },
   {
     anonymous: false,
-    inputs: [{indexed: true, internalType: 'address', name: 'distribution', type: 'address'}],
+    inputs: [{ indexed: true, internalType: 'address', name: 'distribution', type: 'address' }],
     name: 'SetDistribution',
     type: 'event',
   },
   {
     anonymous: false,
-    inputs: [{indexed: true, internalType: 'address', name: 'feeVault', type: 'address'}],
+    inputs: [{ indexed: true, internalType: 'address', name: 'feeVault', type: 'address' }],
     name: 'SetFeeVault',
     type: 'event',
   },
   {
     anonymous: false,
-    inputs: [{indexed: true, internalType: 'address', name: 'vi', type: 'address'}],
+    inputs: [{ indexed: true, internalType: 'address', name: 'vi', type: 'address' }],
     name: 'SetVotingIncentives',
     type: 'event',
   },
-  {anonymous: false, inputs: [], name: 'StopEmergencyMode', type: 'event'},
+  { anonymous: false, inputs: [], name: 'StopEmergencyMode', type: 'event' },
   {
     anonymous: false,
-    inputs: [{indexed: false, internalType: 'address', name: 'account', type: 'address'}],
+    inputs: [{ indexed: false, internalType: 'address', name: 'account', type: 'address' }],
     name: 'Unpaused',
     type: 'event',
   },
   {
     anonymous: false,
     inputs: [
-      {indexed: true, internalType: 'address', name: 'user', type: 'address'},
-      {indexed: false, internalType: 'uint256', name: 'amount', type: 'uint256'},
+      { indexed: true, internalType: 'address', name: 'user', type: 'address' },
+      { indexed: false, internalType: 'uint256', name: 'amount', type: 'uint256' },
     ],
     name: 'Withdraw',
     type: 'event',
@@ -214,36 +214,36 @@ const GAUGE_V2_ABI = [
   {
     inputs: [],
     name: 'DISTRIBUTION',
-    outputs: [{internalType: 'address', name: '', type: 'address'}],
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
     inputs: [],
     name: 'DURATION',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
     inputs: [],
     name: 'TOKEN',
-    outputs: [{internalType: 'contract IERC20', name: '', type: 'address'}],
+    outputs: [{ internalType: 'contract IERC20', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },
-  {inputs: [], name: 'activateEmergencyMode', outputs: [], stateMutability: 'nonpayable', type: 'function'},
+  { inputs: [], name: 'activateEmergencyMode', outputs: [], stateMutability: 'nonpayable', type: 'function' },
   {
-    inputs: [{internalType: 'address', name: '_token', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_token', type: 'address' }],
     name: 'addRewardToken',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: 'account', type: 'address'}],
+    inputs: [{ internalType: 'address', name: 'account', type: 'address' }],
     name: 'balanceOf',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
@@ -251,8 +251,8 @@ const GAUGE_V2_ABI = [
     inputs: [],
     name: 'claimFees',
     outputs: [
-      {internalType: 'uint256', name: 'claimed0', type: 'uint256'},
-      {internalType: 'uint256', name: 'claimed1', type: 'uint256'},
+      { internalType: 'uint256', name: 'claimed0', type: 'uint256' },
+      { internalType: 'uint256', name: 'claimed1', type: 'uint256' },
     ],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -260,45 +260,45 @@ const GAUGE_V2_ABI = [
   {
     inputs: [],
     name: 'claimer',
-    outputs: [{internalType: 'address', name: '', type: 'address'}],
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'uint256', name: 'amount', type: 'uint256'}],
+    inputs: [{ internalType: 'uint256', name: 'amount', type: 'uint256' }],
     name: 'deposit',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
-  {inputs: [], name: 'depositAll', outputs: [], stateMutability: 'nonpayable', type: 'function'},
+  { inputs: [], name: 'depositAll', outputs: [], stateMutability: 'nonpayable', type: 'function' },
   {
     inputs: [
-      {internalType: 'address', name: '_account', type: 'address'},
-      {internalType: 'address', name: '_token', type: 'address'},
+      { internalType: 'address', name: '_account', type: 'address' },
+      { internalType: 'address', name: '_token', type: 'address' },
     ],
     name: 'earned',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_account', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_account', type: 'address' }],
     name: 'earnedAll',
-    outputs: [{internalType: 'uint256[]', name: 'amounts', type: 'uint256[]'}],
+    outputs: [{ internalType: 'uint256[]', name: 'amounts', type: 'uint256[]' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
     inputs: [],
     name: 'emergency',
-    outputs: [{internalType: 'bool', name: '', type: 'bool'}],
+    outputs: [{ internalType: 'bool', name: '', type: 'bool' }],
     stateMutability: 'view',
     type: 'function',
   },
-  {inputs: [], name: 'emergencyWithdraw', outputs: [], stateMutability: 'nonpayable', type: 'function'},
+  { inputs: [], name: 'emergencyWithdraw', outputs: [], stateMutability: 'nonpayable', type: 'function' },
   {
-    inputs: [{internalType: 'uint256', name: '_amount', type: 'uint256'}],
+    inputs: [{ internalType: 'uint256', name: '_amount', type: 'uint256' }],
     name: 'emergencyWithdrawAmount',
     outputs: [],
     stateMutability: 'nonpayable',
@@ -307,36 +307,36 @@ const GAUGE_V2_ABI = [
   {
     inputs: [],
     name: 'feeVault',
-    outputs: [{internalType: 'address', name: '', type: 'address'}],
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },
-  {inputs: [], name: 'getReward', outputs: [], stateMutability: 'nonpayable', type: 'function'},
+  { inputs: [], name: 'getReward', outputs: [], stateMutability: 'nonpayable', type: 'function' },
   {
-    inputs: [{internalType: 'address', name: '_token', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_token', type: 'address' }],
     name: 'getReward',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: 'user', type: 'address'}],
+    inputs: [{ internalType: 'address', name: 'user', type: 'address' }],
     name: 'getRewardFor',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '', type: 'address' }],
     name: 'isRewardToken',
-    outputs: [{internalType: 'bool', name: '', type: 'bool'}],
+    outputs: [{ internalType: 'bool', name: '', type: 'bool' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
     inputs: [
-      {internalType: 'address', name: '_token', type: 'address'},
-      {internalType: 'uint256', name: '_amount', type: 'uint256'},
+      { internalType: 'address', name: '_token', type: 'address' },
+      { internalType: 'uint256', name: '_amount', type: 'uint256' },
     ],
     name: 'notifyRewardAmount',
     outputs: [],
@@ -345,8 +345,8 @@ const GAUGE_V2_ABI = [
   },
   {
     inputs: [
-      {internalType: 'address', name: '_token', type: 'address'},
-      {internalType: 'uint256', name: '_amount', type: 'uint256'},
+      { internalType: 'address', name: '_token', type: 'address' },
+      { internalType: 'uint256', name: '_amount', type: 'uint256' },
     ],
     name: 'notifyRewardAmountTransferFrom',
     outputs: [],
@@ -356,12 +356,12 @@ const GAUGE_V2_ABI = [
   {
     inputs: [],
     name: 'owner',
-    outputs: [{internalType: 'address', name: '', type: 'address'}],
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'bool', name: 'status', type: 'bool'}],
+    inputs: [{ internalType: 'bool', name: 'status', type: 'bool' }],
     name: 'pause',
     outputs: [],
     stateMutability: 'nonpayable',
@@ -370,98 +370,98 @@ const GAUGE_V2_ABI = [
   {
     inputs: [],
     name: 'paused',
-    outputs: [{internalType: 'bool', name: '', type: 'bool'}],
+    outputs: [{ internalType: 'bool', name: '', type: 'bool' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_token', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_token', type: 'address' }],
     name: 'periodFinish',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_token', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_token', type: 'address' }],
     name: 'removeRewardToken',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
-  {inputs: [], name: 'renounceOwnership', outputs: [], stateMutability: 'nonpayable', type: 'function'},
+  { inputs: [], name: 'renounceOwnership', outputs: [], stateMutability: 'nonpayable', type: 'function' },
   {
-    inputs: [{internalType: 'address', name: '_token', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_token', type: 'address' }],
     name: 'rewardForDuration',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_token', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_token', type: 'address' }],
     name: 'rewardPerToken',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_token', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_token', type: 'address' }],
     name: 'rewardRate',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    inputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     name: 'rewardTokens',
-    outputs: [{internalType: 'address', name: '', type: 'address'}],
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
     inputs: [],
     name: 'rewardTokensLength',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_claimer', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_claimer', type: 'address' }],
     name: 'setClaimer',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_distribution', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_distribution', type: 'address' }],
     name: 'setDistribution',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_feeVault', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_feeVault', type: 'address' }],
     name: 'setFeeVault',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: '_vi', type: 'address'}],
+    inputs: [{ internalType: 'address', name: '_vi', type: 'address' }],
     name: 'setVotingIncentives',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
-  {inputs: [], name: 'stopEmergencyMode', outputs: [], stateMutability: 'nonpayable', type: 'function'},
+  { inputs: [], name: 'stopEmergencyMode', outputs: [], stateMutability: 'nonpayable', type: 'function' },
   {
     inputs: [],
     name: 'totalSupply',
-    outputs: [{internalType: 'uint256', name: '', type: 'uint256'}],
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'address', name: 'newOwner', type: 'address'}],
+    inputs: [{ internalType: 'address', name: 'newOwner', type: 'address' }],
     name: 'transferOwnership',
     outputs: [],
     stateMutability: 'nonpayable',
@@ -470,19 +470,19 @@ const GAUGE_V2_ABI = [
   {
     inputs: [],
     name: 'votingIncentives',
-    outputs: [{internalType: 'contract IVotingIncentives', name: '', type: 'address'}],
+    outputs: [{ internalType: 'contract IVotingIncentives', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },
   {
-    inputs: [{internalType: 'uint256', name: 'amount', type: 'uint256'}],
+    inputs: [{ internalType: 'uint256', name: 'amount', type: 'uint256' }],
     name: 'withdraw',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
-  {inputs: [], name: 'withdrawAll', outputs: [], stateMutability: 'nonpayable', type: 'function'},
-  {inputs: [], name: 'withdrawAllAndHarvest', outputs: [], stateMutability: 'nonpayable', type: 'function'},
+  { inputs: [], name: 'withdrawAll', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+  { inputs: [], name: 'withdrawAllAndHarvest', outputs: [], stateMutability: 'nonpayable', type: 'function' },
 ]
 
 const FARM_STRATEGY_ABI = [
@@ -2552,7 +2552,13 @@ async function main() {
   _print(`Initialized ${App.YOUR_ADDRESS}\n`)
   _print('Reading smart contracts...\n')
 
-  const prices = await getBscPrices()
+  let prices = {};
+
+  try {
+    prices = await getBscPrices();
+  } catch (e) {
+    prices = await getBnbPrices2();
+  }
   const tokens = {}
 
   const sickle_factory_address = '0x53d9780DbD3831E3A797Fd215be4131636cD5FDf'
@@ -2715,18 +2721,18 @@ async function printThenaPool(App, info, chain = 'eth', customURLs) {
   const userStakedPct = (userStakedUsd / info.staked_tvl) * 100
   _print(
     `You are staking ${info.userStaked.toFixed(6)} ${info.stakeTokenTicker} ` +
-      `$${formatMoney(userStakedUsd)} (${userStakedPct.toFixed(2)}% of the pool).`
+    `$${formatMoney(userStakedUsd)} (${userStakedPct.toFixed(2)}% of the pool).`
   )
-  const unstake = async function() {
+  const unstake = async function () {
     return rewardsContract_unstake(info.gauge, App)
   }
-  const claim = async function() {
+  const claim = async function () {
     return thenaContract_claim(info.gauge, App)
   }
-  const sickle_thena_unstake = async function() {
+  const sickle_thena_unstake = async function () {
     return sickle_thenaContract_unstake(info.gauge, info.stakeTokenAddress, info._userStaked, App)
   }
-  const sickle_thena_claim = async function() {
+  const sickle_thena_claim = async function () {
     return sickle_thenaContract_claim(info.gauge, App)
   }
   _print(`<a target="_blank" href="https://bscscan.com/address/${info.gauge}#code">BSC Scan</a>`)
@@ -2753,7 +2759,7 @@ async function printThenaPool(App, info, chain = 'eth', customURLs) {
   _print('')
 }
 
-const sickle_thenaContract_unstake = async function(rewardPoolAddr, lpToken, userStaked, App) {
+const sickle_thenaContract_unstake = async function (rewardPoolAddr, lpToken, userStaked, App) {
   const signer = App.provider.getSigner()
 
   const REWARD_POOL = new ethers.Contract(FARM_STRATEGY_ADDRESS, FARM_STRATEGY_ABI, signer)
@@ -2771,15 +2777,15 @@ const sickle_thenaContract_unstake = async function(rewardPoolAddr, lpToken, use
 
   showLoading()
   REWARD_POOL.simpleWithdraw(farm, params)
-    .then(function(t) {
+    .then(function (t) {
       return App.provider.waitForTransaction(t.hash)
     })
-    .catch(function() {
+    .catch(function () {
       hideLoading()
     })
 }
 
-const sickle_thenaContract_claim = async function(rewardPoolAddr, App) {
+const sickle_thenaContract_claim = async function (rewardPoolAddr, App) {
   const signer = App.provider.getSigner()
 
   const farm = {
@@ -2797,45 +2803,68 @@ const sickle_thenaContract_claim = async function(rewardPoolAddr, App) {
 
   showLoading()
   REWARD_POOL.claimFees()
-    .then(function(t) {
+    .then(function (t) {
       return App.provider.waitForTransaction(t.hash)
     })
-    .catch(function(t) {
+    .catch(function (t) {
       console.log(t)
       hideLoading()
     })
 
   showLoading()
   FARM_STRATEGY.simpleHarvest(farm, params)
-    .then(function(t) {
+    .then(function (t) {
       return App.provider.waitForTransaction(t.hash)
     })
-    .catch(function() {
+    .catch(function () {
       hideLoading()
     })
 }
 
-const thenaContract_claim = async function(rewardPoolAddr, App) {
+const thenaContract_claim = async function (rewardPoolAddr, App) {
   const signer = App.provider.getSigner()
 
   const REWARD_POOL = new ethers.Contract(rewardPoolAddr, GAUGE_V2_ABI, signer)
 
   showLoading()
   REWARD_POOL.claimFees()
-    .then(function(t) {
+    .then(function (t) {
       return App.provider.waitForTransaction(t.hash)
     })
-    .catch(function(t) {
+    .catch(function (t) {
       console.log(t)
       hideLoading()
     })
 
   showLoading()
   REWARD_POOL.getReward(App.YOUR_ADDRESS)
-    .then(function(t) {
+    .then(function (t) {
       return App.provider.waitForTransaction(t.hash)
     })
-    .catch(function() {
+    .catch(function () {
       hideLoading()
     })
+}
+
+async function getBnbPrices2() {
+  const BnbTokenContracts = bscTokens.map(x => x.contract.toLowerCase())
+  const idPrices = await lookUpPrices2(BnbTokenContracts);
+  const prices = {}
+  for (const bt of bscTokens)
+    if (idPrices[bt.contract])
+      prices[bt.contract] = { usd: idPrices[bt.contract] };
+  return prices;
+}
+
+const lookUpPrices2 = async function (id_array) {
+  const prices = {}
+  let ids = id_array.join('%2C')
+  let res = await $.ajax({
+    url: 'https://api.vfat.io/v4/token?chainId=56&address=' + ids,
+    type: 'GET',
+  })
+  for (const [key, v] of Object.entries(res)) {
+    if (v.price) prices[v.address] = v.price;
+  }
+  return prices
 }

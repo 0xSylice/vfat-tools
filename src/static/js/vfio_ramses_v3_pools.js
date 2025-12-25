@@ -61,7 +61,7 @@ async function main() {
   const [_ramses_pools] = await App.ethcallProvider.all([RAMSES_GAUGE_MANAGER.getAllPools()])
   const ramses_pools = _ramses_pools.map(a => a.toLowerCase())
 
-  const pools_response = await $.ajax({url: 'https://api.vfat.io/v1/farms?chainId=999', type: 'GET'})
+  const pools_response = await $.ajax({url: 'https://api.vfat.io/v4/farms?chainId=999', type: 'GET'})
   const vfat_pools = pools_response.map(d => d.pool.address.toLowerCase())
 
   let missing_pools = [], missingTokens = []
@@ -74,7 +74,7 @@ async function main() {
   }
 
   const tokens_response = await $.ajax({
-    url: 'https://api.vfat.io/v1/chain-tokens?chainId=999&pageSize=999',
+    url: 'https://api.vfat.io/v4/chain-tokens?chainId=999&pageSize=999',
     type: 'GET',
   })
   const vfat_tokens = tokens_response.map(d => d.address.toLowerCase())

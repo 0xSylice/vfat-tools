@@ -116,14 +116,12 @@ $(function() {
 
     // http request to vfat-api
     const response = await $.ajax({
-      url: 'https://api.vfat.io/v1/farms',
+      url: 'https://api.vfat.io/v4/farms',
       type: 'GET',
     });
-
-    // old url api request = https://api.vfat.io/v1/tokens?chainId=8453&pageSize=999
     
     const response2 = await $.ajax({
-      url: 'https://api.vfat.io/v1/chain-tokens?chainId=8453&pageSize=999',
+      url: 'https://api.vfat.io/v4/chain-tokens?chainId=8453&pageSize=999',
       type: 'GET',
     });
 

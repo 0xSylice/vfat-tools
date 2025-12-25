@@ -105,12 +105,12 @@ $(function() {
 
   // http request to vfat-api
   const response = await $.ajax({
-      url: 'https://api.vfat.io/v1/farms',
+      url: 'https://api.vfat.io/v4/farms',
       type: 'GET',
     });
 
     const response2 = await $.ajax({
-      url: 'https://api.vfat.io/v1/tokens?chainId=57073&pageSize=999',
+      url: 'https://api.vfat.io/v4/tokens?chainId=57073&pageSize=999',
       type: 'GET',
     });
 

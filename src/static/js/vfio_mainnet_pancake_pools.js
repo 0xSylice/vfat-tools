@@ -43,22 +43,22 @@ $(function() {
 
     // http request to vfat-api
     const response = await $.ajax({
-      url: 'https://api.vfat.io/v1/farms',
+      url: 'https://api.vfat.io/v4/farms',
       type: 'GET',
     });
 
     const tokenResponse1 = await $.ajax({
-      url: 'https://api.vfat.io/v1/chain-tokens?chainId==1&page=1&pageSize=999',
+      url: 'https://api.vfat.io/v4/chain-tokens?chainId==1&page=1&pageSize=999',
       type: 'GET',
     });
 
     const tokenResponse2 = await $.ajax({
-      url: 'https://api.vfat.io/v1/chain-tokens?chainId==1&page=2&pageSize=999',
+      url: 'https://api.vfat.io/v4/chain-tokens?chainId==1&page=2&pageSize=999',
       type: 'GET',
     });
 
     const tokenResponse3 = await $.ajax({
-      url: 'https://api.vfat.io/v1/chain-tokens?chainId==1&page=3&pageSize=999',
+      url: 'https://api.vfat.io/v4/chain-tokens?chainId==1&page=3&pageSize=999',
       type: 'GET',
     });
 

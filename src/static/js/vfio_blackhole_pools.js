@@ -89,7 +89,7 @@ async function main() {
   const _blackhole_pools = await App.ethcallProvider.all(pool_calls)
   const blackhole_pools = _blackhole_pools.map(a => a.toLowerCase())
 
-  const pools_response = await $.ajax({url: 'https://api.vfat.io/v1/farms?chainId=43114', type: 'GET'})
+  const pools_response = await $.ajax({url: 'https://api.vfat.io/v4/farms?chainId=43114', type: 'GET'})
   const vfat_pools = pools_response.map(d => d.pool.address.toLowerCase())
 
   let missing_pools = [], missingTokens = []
@@ -102,7 +102,7 @@ async function main() {
   }
 
   const tokens_response = await $.ajax({
-    url: 'https://api.vfat.io/v1/chain-tokens?chainId=43114&pageSize=999',
+    url: 'https://api.vfat.io/v4/chain-tokens?chainId=43114&pageSize=999',
     type: 'GET',
   })
   const vfat_tokens = tokens_response.map(d => d.address.toLowerCase())
